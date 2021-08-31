@@ -16,5 +16,19 @@ spec:
       containers:
       - name: ssl-vpn
         image: simondelord/ssl:latest
+        volumeMounts:
+        - mountPath: /run
+          name: run-volume
+        - mountPath: /run/lock
+          name: lock-volume
+        - mountPath: /tmp
+          name: tmp-volume
         ports:
         - containerPort: 443
+      volumes:
+      - name: run-volume
+        emptyDir: {}
+      - name: lock-volume
+        emptyDir: {}
+      - name: tmp-volume
+        emptyDir: {}
