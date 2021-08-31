@@ -25,8 +25,8 @@ spec:
           name: lock-volume
         - mountPath: /tmp
           name: tmp-volume
-        - mountPath: /lib/modules
-          name: modules-volume
+#        - mountPath: /lib/modules
+#          name: modules-volume
         ports:
         - containerPort: 443
       volumes:
@@ -39,6 +39,6 @@ spec:
       - name: tmp-volume
         hostPath:
           path: /tmp
-      - name: modules-volume
-        hostPath:
-          path: /lib/modules
+#      - name: modules-volume
+#        hostPath:
+#          path: /lib/modules
