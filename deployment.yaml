@@ -16,6 +16,8 @@ spec:
       containers:
       - name: ssl-vpn
         image: simondelord/ssl:latest
+        securityContext:
+          privileged: true
         volumeMounts:
 #        - mountPath: /run
 #          name: run-volume
