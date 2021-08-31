@@ -17,21 +17,21 @@ spec:
       - name: ssl-vpn
         image: simondelord/ssl:latest
         volumeMounts:
-        - mountPath: /run
-          name: run-volume
-        - mountPath: /run/lock
-          name: lock-volume
+#        - mountPath: /run
+#          name: run-volume
+#        - mountPath: /run/lock
+#          name: lock-volume
         - mountPath: /tmp
           name: tmp-volume
         ports:
         - containerPort: 443
       volumes:
-      - name: run-volume
-        hostPath:
-         path: /run
-      - name: lock-volume
-        hostPath:
-         path: /run/lock
+#      - name: run-volume
+#        hostPath:
+#          path: /run
+#      - name: lock-volume
+#        hostPath:
+#          path: /run/lock
       - name: tmp-volume
         hostPath:
-         path: /tmp
+          path: /tmp
