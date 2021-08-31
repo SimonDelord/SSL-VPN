@@ -28,10 +28,10 @@ spec:
       volumes:
       - name: run-volume
         hostPath:
-          path: /run
+         path: /run
       - name: lock-volume
         hostPath:
-          path: /run/lock
+         path: /run/lock
       - name: tmp-volume
         hostPath:
-          path: /tmp
+         path: /tmp
