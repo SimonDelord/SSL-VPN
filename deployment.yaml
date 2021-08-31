@@ -27,8 +27,11 @@ spec:
         - containerPort: 443
       volumes:
       - name: run-volume
-        emptyDir: {}
+        hostPath:
+          path: /run
       - name: lock-volume
-        emptyDir: {}
+        hostPath:
+          path: /run/lock
       - name: tmp-volume
-        emptyDir: {}
+        hostPath:
+          path: /tmp
